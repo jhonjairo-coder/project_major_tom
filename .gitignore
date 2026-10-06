@@ -7,3 +7,8 @@ pentest/*/LEDGER.md
 pentest/*/.claude/
 *.log
 *.tmp
+pentest/*/*/findings/
+pentest/*/*/spec/
+pentest/*/*/traffic/
+pentest/*/*/scripts/
+pentest/*/*/LEDGER.md
