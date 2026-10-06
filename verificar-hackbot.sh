@@ -12,7 +12,7 @@ chk "cerebro existe"                "[ -d ~/ProjectMajorTom/brain/skills ]"     
 chk "skills accesibles via ~/.claude/skills" "[ $(ls ~/.claude/skills/*/SKILL.md 2>/dev/null | wc -l) -ge 7 ]" "ln -s ~/ProjectMajorTom/brain/skills/<skill> ~/.claude/skills/"
 chk "LEARNINGS.md existe y nonzero" "[ -s ~/ProjectMajorTom/brain/LEARNINGS.md ]"           "crear ~/ProjectMajorTom/brain/LEARNINGS.md (ver formato tabla)"
 chk "enlace LEARNINGS"              "[ -L ~/.claude/LEARNINGS.md ] && [ -e ~/.claude/LEARNINGS.md ]" "ln -s ~/ProjectMajorTom/brain/LEARNINGS.md ~/.claude/LEARNINGS.md"
-chk "git versionando ConectaIA" "[ -d ~/ProjectMajorTom/.git ]" "cd ~/ProjectMajorTom && git init"
+chk "git versionando ProjectMajorTom" "[ -d ~/ProjectMajorTom/.git ]" "cd ~/ProjectMajorTom && git init"
 
 echo "== 2. Skills (7, con SKILL.md nonzero y name coincidente) =="
 for s in recon js-analyze content-discovery vuln-scan report review retro; do
