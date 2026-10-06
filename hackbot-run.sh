@@ -4,7 +4,7 @@
 # Riesgo: bajo — solo arranca Claude Code local; el tráfico de scanning sale según SCOPE.md.
 
 CLIENTE=$1
-BASE=~/ConectaIA/pentest/$CLIENTE
+BASE=~/ProjectMajorTom/pentest/$CLIENTE
 
 if [ -z "$CLIENTE" ]; then
   echo "Uso: $0 <cliente>"
@@ -28,13 +28,13 @@ echo "  Alcance: $(grep -v '^#' "$BASE/SCOPE.md" | grep -v '^$' | tr '\n' ' ')"
 claude "Ejecuta el ciclo completo del HACKBOT en este proyecto: recon → js-analyze → content-discovery → vuln-scan → report → review. Respeta SCOPE.md como única fuente de verdad y las hard gates del CLAUDE.md. No omitas ningún paso: LEDGER.md debe quedar 100% marcado."
 
 # Post-corrida: registrar costo en costos.log (baseline por corrida)
-if [ -x ~/ConectaIA/costo-corrida.sh ]; then
+if [ -x ~/ProjectMajorTom/costo-corrida.sh ]; then
   {
     echo ""
     echo "=== $(date -u +%Y-%m-%dT%H:%M:%SZ) $CLIENTE ==="
-    ~/ConectaIA/costo-corrida.sh "$CLIENTE" 2>/dev/null | tail -4
-  } >> ~/ConectaIA/costos.log
-  echo "✓ costo registrado en ~/ConectaIA/costos.log"
+    ~/ProjectMajorTom/costo-corrida.sh "$CLIENTE" 2>/dev/null | tail -4
+  } >> ~/ProjectMajorTom/costos.log
+  echo "✓ costo registrado en ~/ProjectMajorTom/costos.log"
 else
-  echo "⚠ no encontré ~/ConectaIA/costo-corrida.sh — costo no registrado"
+  echo "⚠ no encontré ~/ProjectMajorTom/costo-corrida.sh — costo no registrado"
 fi

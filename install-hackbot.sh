@@ -3,7 +3,7 @@
 # No requiere carpetas adicionales; todo está embebido. Riesgo: bajo, solo escribe en $HOME.
 
 set -e
-DEST=~/ConectaIA
+DEST=~/ProjectMajorTom
 
 echo "== 1/4 Skills (lee Claude Code al arrancar) =="
 mkdir -p ~/.claude/skills
@@ -252,7 +252,7 @@ cat > $DEST/hackbot-run.sh <<'RUNEOF'
 # Riesgo: bajo — solo arranca Claude Code local; el tráfico de scanning sale según SCOPE.md.
 
 CLIENTE=$1
-BASE=~/ConectaIA/pentest/$CLIENTE
+BASE=~/ProjectMajorTom/pentest/$CLIENTE
 
 if [ -z "$CLIENTE" ]; then
   echo "Uso: $0 <cliente>"
@@ -273,8 +273,8 @@ chmod +x $DEST/hackbot-run.sh
 
 # Alinear nuevo-pentest.sh a la nueva ubicación (si existe y aún apunta a ~/work)
 if [ -f $DEST/nuevo-pentest.sh ] && grep -q "work/pentest" $DEST/nuevo-pentest.sh; then
-  sed -i 's|~/work/pentest|~/ConectaIA/pentest|g' $DEST/nuevo-pentest.sh
-  echo "  nuevo-pentest.sh reubicado a ~/ConectaIA/pentest"
+  sed -i 's|~/work/pentest|~/ProjectMajorTom/pentest|g' $DEST/nuevo-pentest.sh
+  echo "  nuevo-pentest.sh reubicado a ~/ProjectMajorTom/pentest"
 fi
 
 echo "== 4/4 Verificación =="
@@ -282,5 +282,5 @@ echo "Skills: $(ls ~/.claude/skills | tr '\n' ' ')"
 echo "Templates: $(ls $DEST/pentest/_templates | tr '\n' ' ')"
 echo ""
 echo "Flujo:"
-echo "  ./nuevo-pentest.sh <cliente> web && nano ~/ConectaIA/pentest/<cliente>/SCOPE.md"
+echo "  ./nuevo-pentest.sh <cliente> web && nano ~/ProjectMajorTom/pentest/<cliente>/SCOPE.md"
 echo "  ./hackbot-run.sh <cliente>"

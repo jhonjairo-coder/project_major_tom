@@ -10,8 +10,8 @@ CLIENTE=$1; shift
 SOLO=""
 [ "$1" = "--solo" ] && SOLO=$2
 
-SRC=~/ConectaIA/pentest/$CLIENTE
-BASE=~/ConectaIA/pentest/${CLIENTE}-multi
+SRC=~/ProjectMajorTom/pentest/$CLIENTE
+BASE=~/ProjectMajorTom/pentest/${CLIENTE}-multi
 
 if [ ! -f "$SRC/SCOPE.md" ]; then
   echo "Falta $SRC/SCOPE.md (proyecto base). Crealo con nuevo-pentest.sh y llenalo."
