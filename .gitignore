@@ -1,0 +1,9 @@
+# artefactos de corrida — pueden contener datos sensibles de objetivos
+pentest/*/findings/
+pentest/*/spec/
+pentest/*/traffic/
+pentest/*/scripts/
+pentest/*/LEDGER.md
+pentest/*/.claude/
+*.log
+*.tmp
