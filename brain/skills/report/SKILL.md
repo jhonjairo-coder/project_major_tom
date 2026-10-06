@@ -17,3 +17,4 @@ description: Consolida findings validados en REPORTE.md ejecutivo. Corrige la in
 
 ## Artefacto terminado
 findings/REPORTE.md (nonzero), con evidencias referenciadas que existen en disco.
+6. [ ] Verificar que existe spec/owasp-coverage.md con las 10 categorias API (+ anexo web si aplica). Faltan categorias sin razon -> FAIL de review.
