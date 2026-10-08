@@ -1,15 +1,7 @@
-# artefactos de corrida — pueden contener datos sensibles de objetivos
-pentest/*/findings/
-pentest/*/spec/
-pentest/*/traffic/
-pentest/*/scripts/
-pentest/*/LEDGER.md
-pentest/*/.claude/
+# carpeta de pentest — contiene evidencia, findings y datos sensibles de objetivos reales
+pentest/
+
+# artefactos internos
+brain/skills/synced/
 *.log
 *.tmp
-pentest/*/*/findings/
-pentest/*/*/spec/
-pentest/*/*/traffic/
-pentest/*/*/scripts/
-pentest/*/*/LEDGER.md
-brain/skills/synced/
